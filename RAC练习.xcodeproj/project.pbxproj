@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A253CE3B85E18CF86D1ACA09 /* libPods-RAC练习.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 182B311E6AB6CAA6AC035033 /* libPods-RAC练习.a */; };
 		F53EEFC520775D1900AEBCE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F53EEFC420775D1900AEBCE1 /* AppDelegate.m */; };
 		F53EEFC820775D1900AEBCE1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F53EEFC720775D1900AEBCE1 /* ViewController.m */; };
 		F53EEFCB20775D1900AEBCE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F53EEFC920775D1900AEBCE1 /* Main.storyboard */; };
@@ -35,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		182B311E6AB6CAA6AC035033 /* libPods-RAC练习.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RAC练习.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4847A1FACBA0B27AED6650E4 /* Pods-RAC练习.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAC练习.release.xcconfig"; path = "Pods/Target Support Files/Pods-RAC练习/Pods-RAC练习.release.xcconfig"; sourceTree = "<group>"; };
+		AE2B8D4E5CFD6DCF17D3886B /* Pods-RAC练习.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAC练习.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RAC练习/Pods-RAC练习.debug.xcconfig"; sourceTree = "<group>"; };
 		F53EEFC020775D1900AEBCE1 /* RAC练习.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RAC练习.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53EEFC320775D1900AEBCE1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F53EEFC420775D1900AEBCE1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A253CE3B85E18CF86D1ACA09 /* libPods-RAC练习.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AE2D6AAB860B81008D68604 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AE2B8D4E5CFD6DCF17D3886B /* Pods-RAC练习.debug.xcconfig */,
+				4847A1FACBA0B27AED6650E4 /* Pods-RAC练习.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		0D97DDDA011304D138B78C4E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				182B311E6AB6CAA6AC035033 /* libPods-RAC练习.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F53EEFB720775D1800AEBCE1 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +107,8 @@
 				F53EEFDB20775D1900AEBCE1 /* RAC练习Tests */,
 				F53EEFE620775D1900AEBCE1 /* RAC练习UITests */,
 				F53EEFC120775D1900AEBCE1 /* Products */,
+				0AE2D6AAB860B81008D68604 /* Pods */,
+				0D97DDDA011304D138B78C4E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,9 +163,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F53EEFEC20775D1900AEBCE1 /* Build configuration list for PBXNativeTarget "RAC练习" */;
 			buildPhases = (
+				276855097CF17F04B8A35A37 /* [CP] Check Pods Manifest.lock */,
 				F53EEFBC20775D1900AEBCE1 /* Sources */,
 				F53EEFBD20775D1900AEBCE1 /* Frameworks */,
 				F53EEFBE20775D1900AEBCE1 /* Resources */,
+				87F2E6A47C575621147C182C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -259,6 +285,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		276855097CF17F04B8A35A37 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RAC练习-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87F2E6A47C575621147C182C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RAC练习/Pods-RAC练习-resources.sh",
+				"${PODS_ROOT}/HXWeiboPhotoPicker/微博照片选择/HXWeiboPhotoPicker/HXWeiboPhotoPicker.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HXWeiboPhotoPicker.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RAC练习/Pods-RAC练习-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F53EEFBC20775D1900AEBCE1 /* Sources */ = {
@@ -428,6 +493,7 @@
 		};
 		F53EEFED20775D1900AEBCE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE2B8D4E5CFD6DCF17D3886B /* Pods-RAC练习.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -442,6 +508,7 @@
 		};
 		F53EEFEE20775D1900AEBCE1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4847A1FACBA0B27AED6650E4 /* Pods-RAC练习.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

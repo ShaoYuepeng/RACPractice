@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *userFile;
+@property (weak, nonatomic) IBOutlet UITextField *psdFile;
+@property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 
 
 @end
