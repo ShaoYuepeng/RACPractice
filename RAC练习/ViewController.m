@@ -59,16 +59,14 @@
     }else{
         self.loginBtn.enabled = NO;
     }
-    
-    
+ 
     return YES;
-    
-}
+
+ }
 */
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
 
 @end

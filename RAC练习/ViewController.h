@@ -14,6 +14,5 @@
 @property (weak, nonatomic) IBOutlet UITextField *psdFile;
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 
-
 @end
 
